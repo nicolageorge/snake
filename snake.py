@@ -8,14 +8,14 @@ class Snake:
         self.color_body = (0, 204, 102)
         self.initial_size = 20
         self.speed = 20
-        
+
         self.dx = 1 #
         self.dy = 0
 
         self.start_pos = [x/2 for x in self.size_window]
         self.data = [[self.start_pos[0], self.start_pos[1]]]
         self.collected_berries = 0
-        
+
         for x in range(self.initial_size):
             """fill the snake"""
             self.data.append([self.data[x][0]-self.size[0], self.start_pos[1]])
@@ -61,8 +61,7 @@ class Snake:
             self.dy = -1
         elif direction == 3:
             self.dx = 1
-            self.dy = 0                
-
+            self.dy = 0
 
 
     def wall_reset(self, wall):
@@ -82,6 +81,7 @@ class Snake:
 
     def modify_collected_berries(self, modifier):
         self.collected_berries = self.collected_berries + modifier
+
 
     def eat(self, berry):
         if berry.type == 'death':
@@ -105,7 +105,7 @@ class Snake:
                 else:
                     berry.reset_to_normal()
                     self.eat(berry)
-            
+
 
     def turn_left(self):
         if self.dx is not 1:

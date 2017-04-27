@@ -17,12 +17,12 @@ class Berry:
 		self.size = [10, 10]
 		self.size_window = [800,600]
 		self.type = type
-		
+
 		if self.type == 'normal':
 			self.color = (0, 255, 0)
-			
+
 		if self.type == "mushroom":
-			self.color = (0, 0, 255)
+			self.color = (0, 0, 230)
 
 		if self.type == "death":
 			self.color = (255, 0, 0)
